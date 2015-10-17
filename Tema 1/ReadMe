@@ -1,0 +1,29 @@
+Popa Maria-Catalina 321CC
+
+ < Proiectarea Algoritmilor - Tema 1 >
+
+ < Patrat >
+
+	Complexitatea : O(n*lg(n)) -> lg(n) de la cautarea binara
+														 -> n*lg(n) deoarece se parcurge vectorul si se
+																apeleaza cautarea binara pentru fiecare element 
+
+	Se citeste din fisier N si K , apoi cele N numere si se salveaza in
+vector. Functia search returneaza a K-a suma in urmatorul mod:
+- se cauta suma cauta intre 2*vector[0] - suma minima - si 2*vector[N -1] -suma
+maxima- .
+- se verifica conditiile de iesire si daca acestea sunt false se continua
+cautare.
+- se calculeaza mijlocul dintre lower si upper si se verifica daca este
+valoarea cautata
+- se parcurge vectorul si pentru fiecare element se face diferenta dintre
+mijloc si element curent
+- variabila mic - retine cate valori mai mici strict decat diferenta exista in
+vector
+- variabila mare - retine cate valori mai mici si egale decat diferente
+sunt
+- variabilele mic si mare se incrementeza apelandu-se functia binarySearch
+din java care returneaza pozitia daca elementul este gasit si negatul
+pozitiei elementului mai mare decat cel cautat. 
+- se verifica conditiile , daca K < mic && K <= mare => a K-a suma
+- altfel se apeleaza recursiv pentru intervalele potrivite

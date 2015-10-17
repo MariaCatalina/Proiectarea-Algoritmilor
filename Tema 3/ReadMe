@@ -1,0 +1,18 @@
+Popa Maria-Catalina 321CC
+
+	<Tema 3>
+<Problema 2 - Prieteni>
+
+Complezitate: O(N^3) - deoarece pentru fiecare persoana se parcurg prietenii
+					   de ordin 2 si 3
+
+	Se citeste din fisier N si cele N^N numere care se retin in matricea de 
+adiacenta graph, apoi se citeste A si B.
+	Se apeleaza functia nrPrieteni atat pentru A care ajunge in B cat si 
+pentru B care ajunge in A, se face minimul si se afiseaza in fisier.
+	Functia nrPrieteni parcurge pentru A prietenii de ordin 1 
+ai acestuia. Pentru fiecare prieten de ordinul1 se parcurg prietenii lui 
+de ordin 1, adica prietenii persoanei de orgin 3. Daca printre acestia se gaseste
+B, se sterge legatura si se incrementeaza numarul de prieteni care trebuie
+eliminati.Se aplica acelasi rationament si pentru cazul cand se pleaca din B si se
+ajunge in A.
